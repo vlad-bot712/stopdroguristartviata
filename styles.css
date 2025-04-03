@@ -1,0 +1,246 @@
+/* Stilizare generală */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar */
+header {
+    background: #6a0dad;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Stilizare pentru linkuri navbar - categoriile din meniu */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efect la hover pentru linkurile din navbar */
+nav ul li a:hover {
+    color: #0015ff;  /* Culoare galbenă la hover */
+    transform: scale(1.1); /* Ușor zoom pentru efect dinamic */
+}
+
+/* Efect pentru butoane */
+#hero .btn {
+    background: white;
+    color: #6a0dad;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    position: relative;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efect la hover pentru butoanele principale */
+#hero .btn:hover {
+    background-color: #002fff; /* Culoare galbenă la hover */
+    color: #6a0dad;
+    transform: translateY(-5px); /* Efect de ridicare */
+}
+
+/* Efecte pentru butoane suplimentare */
+section .btn {
+    background: #6a0dad;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efect la hover pentru butoanele din secțiuni */
+section .btn:hover {
+    background-color: #0000ff; /* Culoare galbenă la hover */
+    color: #6a0dad;
+    transform: scale(1.05); /* Ușor zoom pentru butoanele din secțiuni */
+}
+
+/* Efecte pentru categorii de text - headerul secțiunilor */
+section h2 {
+    color: #6a0dad;
+    transition: color 0.3s ease;
+}
+
+/* Efect la hover pentru titlurile secțiunilor */
+section h2:hover {
+    color: #0008ff; /* Culoare galbenă la hover */
+}
+
+/* Efect pentru linkuri din sponsori */
+.sponsor-list img {
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Efect la hover pentru imaginile sponsori */
+.sponsor-list img:hover {
+    transform: scale(1.1); /* Zoom pe imaginea sponsorului */
+    filter: brightness(1.2); /* Crește luminozitatea la hover */
+}
+
+
+/* Hero Section */
+#hero {
+    background: url('https://source.unsplash.com/1600x900/?nature') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+#hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(106, 13, 173, 0.7);
+}
+
+#hero h1 {
+    font-size: 48px;
+    z-index: 1;
+}
+
+#hero p {
+    font-size: 20px;
+    z-index: 1;
+}
+
+#hero .btn {
+    background: white;
+    color: #6a0dad;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    z-index: 1;
+    position: relative;
+}
+
+/* Sponsori */
+#sponsori {
+    text-align: center;
+    padding: 50px;
+}
+
+#sponsori h2 {
+    color: #6a0dad;
+}
+
+.sponsor-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sponsor-list img {
+    width: 150px;
+    height: auto;
+}
+
+/* Secțiuni individuale */
+.hidden {
+    display: none;
+}
+
+section {
+    text-align: center;
+    padding: 50px;
+    background: white;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+    color: #6a0dad;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #6a0dad;
+    color: white;
+}
+/* Stil pentru modală */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+/* Conținutul modalei */
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 900px;
+}
+
+/* Butonul de închidere */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Logo rotund */
+header .logo {
+    width: 40px; /* Dimensiunea logo-ului */
+    height: 40px;
+    border-radius: 50%; /* Face imaginea rotundă */
+    margin-right: 20px; /* Distanță față de meniul de navigație */
+    margin-top: 3px;
+}
