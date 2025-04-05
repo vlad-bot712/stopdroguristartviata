@@ -244,3 +244,264 @@ header .logo {
     margin-right: 20px; /* Distanță față de meniul de navigație */
     margin-top: 3px;
 }
+
+
+
+
+
+
+#social-media {
+    text-align: center;
+    padding: 40px;
+    background: #fff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.social-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 30px;
+    padding: 20px;
+}
+
+.social-slide {
+    min-width: 100px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.social-slide img {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.social-slide:hover img {
+    transform: scale(1.2) rotate(5deg);
+}
+
+
+
+
+
+
+
+
+
+#newsletter {
+    background-color: #f4f4f4;
+    padding: 40px;
+    text-align: center;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+#newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#newsletter input[type="email"] {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#newsletter-message {
+    margin-top: 15px;
+    color: green;
+    font-weight: bold;
+}
+
+
+
+
+
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.method {
+    margin-bottom: 15px;
+}
+
+.method a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.method .icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+.hidden {
+    display: none;
+}
+
+.sponsor-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sponsor-list img {
+    width: 150px; /* Poți ajusta dimensiunea logo-urilor sponsorilor */
+    height: auto;
+}
+
+
+
+.carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0; /* Spațiu între carusel și alte elemente */
+}
+
+.sponsor-list {
+    display: flex;
+    transition: transform 0.5s ease;
+    overflow: hidden;
+}
+
+.sponsor-item {
+    display: none; /* Ascunde toate sponsorii */
+}
+
+.sponsor-item.active {
+    display: block; /* Afișează doar sponsorul activ */
+}
+
+.sponsor-logo {
+    width: 150px; /* Dimensiunea logo-ului sponsorului */
+    height: auto; /* Înălțimea se ajustează automat */
+}
+
+.carousel-button {
+    background-color: rgba(106, 13, 173, 0.8);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100; /* Asigură-te că butoanele sunt deasupra imaginii */
+}
+
+.carousel-button.left {
+    left: 10px; /* Poziționează săgeata din stânga */
+}
+
+.carousel-button.right {
+    right: 10px; /* Poziționează săgeata din dreapta */
+}
+
+
+
+
+
+#mai-multe {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgb(43, 39, 39);
+}
+
+#mai-multe h2 {
+    color: #6a0dad;
+    margin-bottom: 30px;
+}
+
+/* Containerul cu overflow ascuns și poziționare */
+.rotating-gallery {
+    display: flex;
+    gap: 40px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    height: 180px;
+}
+
+/* Creează o galerie care se deplasează */
+.rotating-gallery::before,
+.rotating-gallery::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(43, 39, 39) 0%, transparent 20%, transparent 80%, rgb(43, 39, 39) 100%);
+    z-index: 2;
+}
+
+/* Imaginile rotunde animate */
+.rotating-gallery .rotating-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    animation: slideLeft 15s linear infinite;
+}
+
+/* Animația de mișcare continuă */
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100vw);
+    }
+    100% {
+        transform: translateX(-200px); /* ajustează dacă ai mai multe imagini */
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .rotating-gallery .rotating-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    #mai-multe h2 {
+        font-size: 22px;
+    }
+}
+
+
+
+
+
+

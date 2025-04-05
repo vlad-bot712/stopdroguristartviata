@@ -5,78 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proiect Antidrog</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
 
-    <header>
-        <nav>
-            <ul>
-                <li><img src="https://cdn.discordapp.com/attachments/1188145120609042514/1356336263845777499/image.png?ex=67ef7dd4&is=67ee2c54&hm=619c5e90186958a6bdea9552b1ff17d7a88d0cbe2184037caa2d8a2914463fd7&" alt="Logo" class="logo"></li> <!-- Logo rotund -->
-                <li><a href="#" onclick="showSection('proiect-antidrog')">Proiect Antidrog</a></li>
-                <li><a href="#" onclick="showSection('chestionar')">Chestionar</a></li>
-                <li><a href="#" onclick="showSection('mai-multe')">Mai multe</a></li>
-                <li><a href="#" onclick="showSection('despre-noi')">Despre noi</a></li>
-                <li><a href="#" onclick="showSection('contact')">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <nav>
+        <ul>
+            <li><img src="images/apizal.png" alt="Logo" class="logo"></li>
+            <li><a href="proiect-antidrog.html">Proiect Antidrog</a></li>
+            <li><a href="chestionar.html">Chestionar</a></li>
+            <li><a href="mai-multe.html">Mai multe</a></li>
+            <li><a href="despre-noi.html">Despre noi</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <section id="hero">
-        <div class="overlay"></div>
-        <h1>Bine ai venit la Proiectul Antidrog</h1>
-        <p>Împreună pentru o lume fără dependențe!</p>
-        <a href="#" class="btn" onclick="showSection('mai-multe')">Află mai multe</a>
-    </section>
+<section id="hero">
+    <div class="overlay"></div>
+    <h1>Bine ai venit la Proiectul Antidrog</h1>
+    <p>Împreună pentru o lume fără dependențe!</p>
+    <a href="mai-multe.html" class="btn">Află mai multe</a>
+    <img src="images/logo.png" alt="Poza">
+</section>
 
-    <!-- Modal pentru deschiderea unei secțiuni într-o interfață separată -->
-    <div id="modal" class="modal hidden">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <div id="modal-content-section"></div>
-        </div>
-    </div>
+<!-- Secțiunea Newsletter -->
+<section id="newsletter">
+    <h2>Abonează-te la Newsletter</h2>
+    <p>Primește noutăți direct pe email!</p>
+    <form id="newsletter-form" onsubmit="return subscribeNewsletter(event)">
+        <input type="email" id="newsletter-email" placeholder="Introdu emailul tău" required />
+        <button type="submit" class="btn">Abonează-te</button>
+    </form>
+    <p id="newsletter-message" class="hidden">Mulțumim pentru abonare! 📨</p>
+</section>
 
-    <!-- Sponsori -->
-    <section id="sponsori">
-        <h2>Sponsori</h2>
+<section id="sponsori">
+    <h2>Sponsori</h2>
+    <div class="carousel">
         <div class="sponsor-list">
-            <a href="https://sponsor1.com" target="_blank"><img src="https://cdn.discordapp.com/attachments/1188145120609042514/1357366962715492493/IMG_8213.png?ex=67eff1fe&is=67eea07e&hm=f6353ffa8400832a95af555388b3977de970f8cf6e3491521675a16cba2c464b&" alt="Laleli SRL"></a>
-            <a href="https://www.facebook.com/DecoNatureBois/?locale=es_LA" target="_blank"><img src="https://cdn.discordapp.com/attachments/1188145120609042514/1357419108895031498/7642131D-A1D3-4973-9881-AE335A963EFD.jpg?ex=67f0228f&is=67eed10f&hm=04beabb12fc3b359a29be5cd181d49311c596ae95bee3325b6862e7276ef937b&" alt="Deco Natura Bois"></a>
-            <a href="https://sponsor3.com" target="_blank"><img src="sponsor3.png" alt="Sponsor 3"></a>
+            <div class="sponsor-item active">
+                <a href="https://www.pufuletiilaleli.ro/" target="_blank">
+                    <img src="images/laleli.png" alt="Laleli SRL" class="sponsor-logo">
+                </a>
+            </div>
+            <div class="sponsor-item">
+                <a href="https://www.facebook.com/DecoNatureBois/?locale=es_LA" target="_blank">
+                    <img src="images/deconatura.jpg" alt="Deco Natura Bois" class="sponsor-logo">
+                </a>
+            </div>
+            <!-- Adaugă mai multe imagini sponsor aici, dacă este necesar -->
         </div>
-    </section>
+        <button class="carousel-button left" onclick="changeSponsor(-1)">&#10094;</button>
+        <button class="carousel-button right" onclick="changeSponsor(1)">&#10095;</button>
+    </div>
+</section>
 
-    <!-- Restul secțiunilor -->
-    <section id="proiect-antidrog" class="hidden">
-        <h2>Proiect Antidrog</h2>
-        <p>"Fii schimbarea pe care vrei să o vezi în lume." - Mahatma Gandhi</p>
-    </section>
 
-    <section id="chestionar" class="hidden">
-        <h2>Chestionar</h2>
-        <p>"Cunoașterea este cheia prevenirii."</p>
 
-    </section>
 
-    <section id="mai-multe" class="hidden">
-        <h2>Mai multe</h2>
-        <p>"Educația este cea mai puternică armă pe care o poți folosi pentru a schimba lumea." - Nelson Mandela</p>
-    </section>
 
-    <section id="despre-noi" class="hidden">
-        <h2>Despre noi</h2>
-        <p>"Împreună suntem mai puternici."</p>
-    </section>
 
-    <section id="contact" class="hidden">
-        <h2>Contact</h2>
-        <p>"Comunicarea este cheia succesului."</p>
-    </section>
+  
 
-    <footer>
-        <p>&copy; 2025 Proiect Antidrog. Toate drepturile rezervate.</p>
-    </footer>
 
+
+
+
+
+<footer>
+    <p>&copy; 2025 Proiect Antidrog. Toate drepturile rezervate.</p>
+</footer>
+
+<div class="social-slider">
+    <a href="https://www.facebook.com/share/156VwtVpA2/?mibextid=wwXIfr" target="_blank" class="social-slide">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+    </a>
+    <a href="https://www.instagram.com/stopdroguri_startviata?igsh=cWdwY3BrYTZtcG41" target="_blank" class="social-slide">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
+    </a>
+    <a href="https://www.tiktok.com/@stopdroguristartviata?is_from_webapp=1&sender_device=pc" target="_blank" class="social-slide">
+        <img src="images/tiktok.png" alt="TikTok">
+    </a>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
