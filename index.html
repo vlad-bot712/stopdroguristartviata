@@ -8,18 +8,22 @@
 </head>
 <body>
 
-<header>
-    <nav>
-        <ul>
-            <li><img src="images/apizal.png" alt="Logo" class="logo"></li>
-            <li><a href="proiect-antidrog.html">Proiect Antidrog</a></li>
-            <li><a href="chestionar.html">Chestionar</a></li>
-            <li><a href="mai-multe.html">Mai multe</a></li>
-            <li><a href="despre-noi.html">Despre noi</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+    <header class="navbar">
+        <img src="images/apizal.png" alt="Logo" class="logo">
+        
+        <h1 class="animated-title">Bine ați venit la proiectul antidrog „Împreună”</h1>
+        
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      
+        <nav class="menu" id="navMenu">
+          <a href="proiect-antidrog.html">Proiect Antidrog</a>
+          <a href="chestionar.html">Interviu</a>
+          <a href="mai-multe.html">Mai multe</a>
+          <a href="despre-noi.html">Despre noi</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </header>
+      
 
 <section id="hero">
     <div class="overlay"></div>
@@ -52,6 +56,11 @@
             <div class="sponsor-item">
                 <a href="https://www.facebook.com/DecoNatureBois/?locale=es_LA" target="_blank">
                     <img src="images/deconatura.jpg" alt="Deco Natura Bois" class="sponsor-logo">
+                </a>
+            </div>
+            <div class="sponsor-item">
+                <a href="https://directtarget.ro/" target="_blank">
+                    <img src="images/direct.jpg" alt="Direct Target" class="sponsor-logo">
                 </a>
             </div>
             <!-- Adaugă mai multe imagini sponsor aici, dacă este necesar -->

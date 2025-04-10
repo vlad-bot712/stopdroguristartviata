@@ -94,3 +94,17 @@ observer.observe(sectionMaiMulte);
 
 
 
+// Toggle meniul din navbar
+function toggleMenu() {
+    const menu = document.getElementById("navMenu");
+    menu.classList.toggle("show");
+  }
+  
+
+
+
+  function toggleMenu() {
+    const menu = document.getElementById("navMenu");
+    menu.classList.toggle("show");
+  }
+  
