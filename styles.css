@@ -713,7 +713,7 @@ header .logo {
 /* Efect dinamic cu mișcări și flashuri */
 .flashy-effect {
     display: inline-block;
-    font-size: 2.0rem;
+    font-size: 1.5rem;
     color: #151217; /* Mov */
     text-shadow: 0 0 5px #6A0DAD, 0 0 10px #6A0DAD, 0 0 20px #6A0DAD;
     animation: flashyMove 2s infinite ease-in-out, flashyFlash 1s infinite alternate;
