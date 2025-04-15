@@ -11,25 +11,43 @@
     <header class="navbar">
         <img src="images/apizal.png" alt="Logo" class="logo">
         
-        <h1 class="animated-title">Bine ați venit la proiectul antidrog „Împreună”</h1>
+        <h1 class="flashy-effect">Bine ați venit la Proiectul Antidrog "Impreuna"</h1>
         
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
       
         <nav class="menu" id="navMenu">
-          <a href="proiect-antidrog.html">Proiect Antidrog</a>
-          <a href="chestionar.html">Interviu</a>
-          <a href="mai-multe.html">Mai multe</a>
-          <a href="despre-noi.html">Despre noi</a>
-          <a href="contact.html">Contact</a>
-        </nav>
+            <button class="close-menu top-close" onclick="toggleMenu()">✖</button>
+          
+            <div class="menu-links">
+              <a href="proiect-antidrog.html">Proiect Antidrog</a>
+              <a href="chestionar.html">Interviu</a>
+              <a href="mai-multe.html">Mai multe</a>
+              <a href="despre-noi.html">Despre noi</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          
+            <div class="menu-social">
+              <a href="https://www.facebook.com/share/156VwtVpA2/?mibextid=wwXIfr" target="_blank" class="social-link">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+              </a>
+              <a href="https://www.instagram.com/stopdroguri_startviata?igsh=cWdwY3BrYTZtcG41" target="_blank" class="social-link">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
+              </a>
+              <a href="https://www.tiktok.com/@stopdroguristartviata?is_from_webapp=1&sender_device=pc" target="_blank" class="social-link">
+                <img src="images/tik-tok.png" alt="TikTok">
+              </a>
+              <button class="close-menu bottom-close" onclick="toggleMenu()">✖</button>
+            </div>
+          </nav>
+          
       </header>
       
 
 <section id="hero">
     <div class="overlay"></div>
-    <h1></h1>
+    <h1>↓</h1>
     <p>Împreună pentru o lume fără dependențe!</p>
-    <a href="mai-multe.html" class="btn">Află mai multe</a>
+    <a href="regulament.html" class="btn">Vezi regulamentul!</a>
     <img src="images/logo.png" alt="Poza">
 </section>
 
@@ -41,7 +59,7 @@
         <input type="email" id="newsletter-email" placeholder="Introdu emailul tău" required />
         <button type="submit" class="btn">Abonează-te</button>
     </form>
-    <p id="newsletter-message" class="hidden">Mulțumim pentru abonare! 📨</p>
+    <p id="newsletter-message" class="hidden">Mulțumim pentru abonare,in curand vei primi mesaj de la administatori nostri! 📨</p>
 </section>
 
 <section id="sponsori">
@@ -70,31 +88,16 @@
     </div>
 </section>
 
-
-
-
-
-
-  
-
-
-
-
-
-
 <footer>
     <p>&copy; 2025 Proiect Antidrog. Toate drepturile rezervate.</p>
 </footer>
 
 <div class="social-slider">
-    <a href="https://www.facebook.com/share/156VwtVpA2/?mibextid=wwXIfr" target="_blank" class="social-slide">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
-    </a>
-    <a href="https://www.instagram.com/stopdroguri_startviata?igsh=cWdwY3BrYTZtcG41" target="_blank" class="social-slide">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
-    </a>
-    <a href="https://www.tiktok.com/@stopdroguristartviata?is_from_webapp=1&sender_device=pc" target="_blank" class="social-slide">
-        <img src="images/tiktok.png" alt="TikTok">
+    <a href="https://anpc.ro" target="_blank" class="social-slider">
+        <img src="images/anpc.png" alt="Facebook">
+
+    <a href=" https://anpc.ro/ce-este-sal" target="_blank" class="social-slider">
+            <img src="images/anpc2.png" alt="Facebook">
     </a>
 </div>
 

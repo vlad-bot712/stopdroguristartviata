@@ -10,22 +10,40 @@
 </head>
 <body>
 
-    <header class="navbar">
-        <img src="images/apizal.png" alt="Logo" class="logo">
-        
-        <h1 class="animated-title">Despre Noi - Proiect Antidrog</h1>
-        
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <header class="navbar">
+    <img src="images/apizal.png" alt="Logo" class="logo">
     
-        <nav class="menu" id="navMenu">
-            <a href="index.html">Acasă</a>
-            <a href="proiect-antidrog.html">Proiect Antidrog</a>
-            <a href="chestionar.html">Interviu</a>
-            <a href="mai-multe.html">Mai multe</a>
-            <a href="despre-noi.html">Despre noi</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+    <h1 class="animated-title">Despre noi - Proiect antidrog</h1>
+    
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  
+    <nav class="menu" id="navMenu">
+        <button class="close-menu top-close" onclick="toggleMenu()">✖</button>
+      
+        <div class="menu-links">
+          <a href="index.html">Acasă</a>
+          <a href="proiect-antidrog.html">Proiect Antidrog</a>
+          <a href="chestionar.html">Interviu</a>
+          <a href="mai-multe.html">Mai multe</a>
+          <a href="despre-noi.html">Despre noi</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      
+        <div class="menu-social">
+          <a href="https://www.facebook.com/share/156VwtVpA2/?mibextid=wwXIfr" target="_blank" class="social-link">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+          </a>
+          <a href="https://www.instagram.com/stopdroguri_startviata?igsh=cWdwY3BrYTZtcG41" target="_blank" class="social-link">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
+          </a>
+          <a href="https://www.tiktok.com/@stopdroguristartviata?is_from_webapp=1&sender_device=pc" target="_blank" class="social-link">
+            <img src="images/tik-tok.png" alt="TikTok">
+          </a>
+          <button class="close-menu bottom-close" onclick="toggleMenu()">✖</button>
+        </div>
+      </nav>
+      
+  </header>
     
 
 <section>
@@ -33,6 +51,101 @@
     <p>"Împreună suntem mai puternici."</p>
     <p>Proiectul Antidrog este dedicat educației și prevenției dependențelor. Ne străduim să oferim informații utile și sprijin comunității noastre.</p>
 </section>
+<section>
+
+<section class="faq">
+  <h2>Întrebări Frecvente</h2>
+  <div class="faq-item">
+      <button class="faq-question" onclick="toggleAnswer(this)">
+          Ce este Proiectul Antidrog? <span class="arrow">▼</span>
+      </button>
+      <div class="faq-answer">
+          Proiectul Antidrog este o inițiativă care are scopul de a educa și preveni consumul de substanțe interzise prin informare și sprijin comunitar.
+      </div>
+  </div>
+  <div class="faq-item">
+      <button class="faq-question" onclick="toggleAnswer(this)">
+          Cum pot contribui la acest proiect? <span class="arrow">▼</span>
+      </button>
+      <div class="faq-answer">
+          Puteți contribui prin voluntariat, donații sau distribuirea informațiilor despre proiect în comunitatea dumneavoastră.
+      </div>
+  </div>
+  <div class="faq-item">
+      <button class="faq-question" onclick="toggleAnswer(this)">
+          Unde pot găsi mai multe informații? <span class="arrow">▼</span>
+      </button>
+      <div class="faq-answer">
+          Mai multe informații pot fi găsite pe pagina noastră oficială sau contactându-ne direct prin secțiunea de contact.
+      </div>
+  </div>
+</section>
+
+<style>
+  .faq {
+      margin: 2rem auto;
+      max-width: 800px;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .faq h2 {
+      text-align: center;
+      color: #6A0DAD; /* Purple color */
+      margin-bottom: 1rem;
+  }
+  .faq-item {
+      margin-bottom: 1rem;
+  }
+  .faq-question {
+      width: 100%;
+      background-color: #6A0DAD; /* Purple color */
+      color: white;
+      border: none;
+      padding: 1rem;
+      text-align: left;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .faq-question:hover {
+      background-color: #5A0C9A; /* Darker purple */
+  }
+  .faq-answer {
+      display: none;
+      padding: 1rem;
+      background-color: white;
+      border: 1px solid #6A0DAD; /* Purple border */
+      border-radius: 5px;
+      margin-top: 0.5rem;
+      color: #333;
+  }
+  .arrow {
+      font-size: 1.2rem;
+      transition: transform 0.3s ease;
+  }
+  .faq-question.open .arrow {
+      transform: rotate(180deg);
+  }
+</style>
+
+<script>
+  function toggleAnswer(button) {
+      const answer = button.nextElementSibling;
+      const arrow = button.querySelector('.arrow');
+      if (answer.style.display === "block") {
+          answer.style.display = "none";
+          arrow.classList.remove('open');
+      } else {
+          answer.style.display = "block";
+          arrow.classList.add('open');
+      }
+  }
+</script>
 
 <footer>
     <p>&copy; 2025 Proiect Antidrog. Toate drepturile rezervate.</p>

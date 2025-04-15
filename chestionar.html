@@ -17,19 +17,66 @@
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     
         <nav class="menu" id="navMenu">
-            <a href="index.html">Acasă</a>
-            <a href="proiect-antidrog.html">Proiect Antidrog</a>
-            <a href="chestionar.html">Interviu</a>
-            <a href="mai-multe.html">Mai multe</a>
-            <a href="despre-noi.html">Despre noi</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+            <button class="close-menu top-close" onclick="toggleMenu()">✖</button>
+          
+            <div class="menu-links">
+              <a href="index.html">Acasă</a>
+              <a href="proiect-antidrog.html">Proiect Antidrog</a>
+              <a href="chestionar.html">Interviu</a>
+              <a href="mai-multe.html">Mai multe</a>
+              <a href="despre-noi.html">Despre noi</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          
+            <div class="menu-social">
+              <a href="https://www.facebook.com/share/156VwtVpA2/?mibextid=wwXIfr" target="_blank" class="social-link">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+              </a>
+              <a href="https://www.instagram.com/stopdroguri_startviata?igsh=cWdwY3BrYTZtcG41" target="_blank" class="social-link">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
+              </a>
+              <a href="https://www.tiktok.com/@stopdroguristartviata?is_from_webapp=1&sender_device=pc" target="_blank" class="social-link">
+                <img src="images/tik-tok.png" alt="TikTok">
+              </a>
+              <button class="close-menu bottom-close" onclick="toggleMenu()">✖</button>
+            </div>
+          </nav>
     </header>
 
 <section>
     <h2>Interviu</h2>
-    <p>"Aceasta categorie reflecta un interviu cu un fost consumator care ne arata niste reflectii asupra acesto substante si cum ar trebui sa ne ferim sa nu ajungem in acea ipostaza</p>
+    <p>"Aceasta categorie reflecta un interviu cu un fost consumator care ne arata cum a actionat el asupra acestor substante , cum a reusit sa se lase si cum ar trebui sa ne ferim sa nu ajungem la fel</p>
     <!-- Adaugă aici întrebările pentru chestionar -->
+     <!-- Adaugă această secțiune sub textul existent din secțiunea Interviu -->
+  <!-- Container pentru videoclip -->
+  <div class="video-container">
+      <iframe 
+          src="videos/interviu.mp4" 
+          title="Videoclip Interviu" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+      </iframe>
+  </div>
+</section>
+
+<style>
+  .video-container {
+      margin: 2rem auto;
+      max-width: 800px;
+      background-color: #6A0DAD; /* Purple background */
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+  }
+  .video-container iframe {
+      width: 100%;
+      height: 450px;
+      border: none;
+      border-radius: 10px;
+  }
+</style>
 </section>
 
 <footer>

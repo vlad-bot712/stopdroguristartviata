@@ -272,8 +272,8 @@ header .logo {
     transition: transform 0.4s ease-in-out;
 }
 
-.social-slide img {
-    width: 60px;
+.social-slider img {
+    width: 150px;
     height: 60px;
     transition: transform 0.4s ease-in-out;
 }
@@ -282,13 +282,11 @@ header .logo {
     transform: scale(1.2) rotate(5deg);
 }
 
-
-
-
-
-
-
-
+.social-slide img {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.4s ease-in-out;
+}
 
 #newsletter {
     background-color: #f4f4f4;
@@ -353,7 +351,7 @@ header .logo {
 }
 
 .social-icon {
-    width: 40px;
+    width: 20px;
     height: 40px;
     margin-right: 15px;
     transition: transform 0.3s;
@@ -439,11 +437,11 @@ header .logo {
 #mai-multe {
     text-align: center;
     padding: 50px 20px;
-    background: rgb(43, 39, 39);
+    background: #6a0dad;
 }
 
 #mai-multe h2 {
-    color: #6a0dad;
+    color: #17121a;
     margin-bottom: 30px;
 }
 
@@ -465,7 +463,7 @@ header .logo {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgb(43, 39, 39) 0%, transparent 20%, transparent 80%, rgb(43, 39, 39) 100%);
+    background: linear-gradient(to right, #6a0dad 0%, transparent 20%, transparent 80%, #6a0dad 100%);
     z-index: 2;
 }
 
@@ -619,3 +617,137 @@ header .logo {
   }
   
 
+
+
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 240px;
+    background: #6a0dad;
+    padding: 30px 15px;
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    color: white;
+    overflow-y: auto;
+}
+
+.menu.show {
+    display: flex;
+    transform: translateX(0);
+}
+
+.menu-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    padding: 6px 0;
+}
+
+.menu a:hover {
+    color: #8800ff;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.menu-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.menu-social .social-link img {
+    width: 26px;
+    height: 26px;
+    transition: transform 0.3s ease;
+}
+
+.menu-social .social-link:hover img {
+    transform: scale(1.3);
+}
+
+.close-menu {
+    font-size: 22px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.close-menu:hover {
+    transform: rotate(90deg) scale(1.2);
+    color: #8c00ff;
+}
+
+.top-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.bottom-close {
+    margin-top: 15px;
+}
+
+
+
+/* Efect dinamic cu mișcări și flashuri */
+.flashy-effect {
+    display: inline-block;
+    font-size: 2.5rem;
+    color: #151217; /* Mov */
+    text-shadow: 0 0 5px #6A0DAD, 0 0 10px #6A0DAD, 0 0 20px #6A0DAD;
+    animation: flashyMove 2s infinite ease-in-out, flashyFlash 1s infinite alternate;
+}
+
+@keyframes flashyMove {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-10px, 10px);
+    }
+    50% {
+        transform: translate(10px, -10px);
+    }
+    75% {
+        transform: translate(-10px, -10px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes flashyFlash {
+    0% {
+        opacity: 1;
+        text-shadow: 0 0 5px #6A0DAD, 0 0 10px #6A0DAD, 0 0 20px #6A0DAD;
+    }
+    50% {
+        opacity: 0.5;
+        text-shadow: 0 0 10px #FF00FF, 0 0 20px #FF00FF, 0 0 30px #FF00FF;
+    }
+    100% {
+        opacity: 1;
+        text-shadow: 0 0 5px #6A0DAD, 0 0 10px #6A0DAD, 0 0 20px #6A0DAD;
+    }
+}
