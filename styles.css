@@ -238,8 +238,8 @@ footer {
 
 /* Logo rotund */
 header .logo {
-    width: 30px; /* Dimensiunea logo-ului */
-    height: 30px;
+    width: 50px; /* Dimensiunea logo-ului */
+    height: 50px;
     border-radius: 50%; /* Face imaginea rotundă */
     margin-right: 20px; /* Distanță față de meniul de navigație */
     margin-top: 3px;
